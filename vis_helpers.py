@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib as mp
 import numpy as np
 import plotly.express as px
-
+import plotly.graph_objects as go
 
 
 '''
@@ -42,12 +42,51 @@ def clean_col(df):
 
 '''
 df - dataframe to be visualized
-return - None
+return - plotly.express line object
 
 Method uses Vega-Altair to render simple interactive plot of df
 '''
 
 def simple_vis(df):
     fig = px.line(df, x = 'time(s)', y = df.columns[0:3])    
-    
     return fig
+
+
+'''
+dfs - list of dataframes
+return plotly graph object 
+'''
+def many_simple(dfs):
+    lines= []
+    for df in dfs:
+        lines.append(
+            go.line(df, x = 'time(s)', y = df.columns[0:3])
+        )
+    
+
+updatemenus = [
+    {
+        'buttons': [
+            {
+                'method': 'restyle',
+                'label': 'Val 1',
+                'args': [
+                    {'y': [values_1, values_1b]},
+                ]
+            },
+            {
+                'method': 'restyle',
+                'label': 'Val 2',
+                'args': [
+                    {'y': [values_2, values_2b]},
+                ]
+            }
+        ],
+        'direction': 'down',
+        'showactive': True,
+    }
+]
+
+layout = go.Layout(
+    updatemenus=updatemenus,
+)

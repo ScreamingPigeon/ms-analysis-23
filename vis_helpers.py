@@ -4,7 +4,7 @@ import matplotlib as mp
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-
+import scipy
 
 '''
 src - directory for source data
@@ -64,29 +64,37 @@ def many_simple(dfs):
         )
     
 
-updatemenus = [
-    {
-        'buttons': [
-            {
-                'method': 'restyle',
-                'label': 'Val 1',
-                'args': [
-                    {'y': [values_1, values_1b]},
-                ]
-            },
-            {
-                'method': 'restyle',
-                'label': 'Val 2',
-                'args': [
-                    {'y': [values_2, values_2b]},
-                ]
-            }
-        ],
-        'direction': 'down',
-        'showactive': True,
-    }
-]
+    updatemenus = [
+        {
+            'buttons': [
+                {
+                    'method': 'restyle',
+                    'label': 'Val 1',
+                    'args': [
+                        {'y': [values_1, values_1b]},
+                    ]
+                },
+                {
+                    'method': 'restyle',
+                    'label': 'Val 2',
+                    'args': [
+                        {'y': [values_2, values_2b]},
+                    ]
+                }
+            ],
+            'direction': 'down',
+            'showactive': True,
+        }
+    ]
 
-layout = go.Layout(
-    updatemenus=updatemenus,
-)
+    layout = go.Layout(
+        updatemenus=updatemenus,
+    )
+
+'''
+input df - single df containing data values from a trial
+output df - triaxis fft. Same number of columns, altered numbers of rows
+'''
+def fft(df):
+    
+    return ...

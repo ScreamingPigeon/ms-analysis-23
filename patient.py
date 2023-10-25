@@ -17,7 +17,8 @@ class Patient:
         self.activities = activities
         self.acc = None
         self.freq = freq
-        self.excel_time = excel_time
+        self.excel_time = 0
+        self.findMinTime()
 
     def tldr(self):
         print('Summary for patient ' + self.id + '. ' + 'There are ' + str(len(self.acc)) + ' timestamps sampled at '+str(
@@ -37,5 +38,20 @@ class Patient:
         df['time(s)'] = np.arange(df.shape[0])/self.freq
         self.acc = df
 
+    def findMinTime(self):
+        t = -1
+        for activity in self.activities:
+            if activity.start < t or t < 0:
+                t = activity.start
+        self.excel_time = t
+
     def to_json(self):
         return json.dumps(self, indent=4, default=lambda o: o.__dict__)
+
+    def nullify(self):
+        self.id = None
+        self.csv_time = None
+        self.activities = None
+        self.acc = None
+        self.freq = None
+        self.excel_time = None

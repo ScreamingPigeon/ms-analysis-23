@@ -1,4 +1,5 @@
 import numpy as np
+import json
 
 
 class Activity:
@@ -14,7 +15,7 @@ class Patient:
         self.id = id
         self.csv_time = csv_time
         self.activities = activities
-        self.acc = acc
+        self.acc = None
         self.freq = freq
         self.excel_time = excel_time
 
@@ -35,3 +36,6 @@ class Patient:
         df.columns = ['x (N)', 'y (N)', 'z (N)']
         df['time(s)'] = np.arange(df.shape[0])/self.freq
         self.acc = df
+
+    def to_json(self):
+        return json.dumps(self, indent=4, default=lambda o: o.__dict__)

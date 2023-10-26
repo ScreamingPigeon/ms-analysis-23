@@ -1,5 +1,7 @@
 import numpy as np
 import json
+import scipy
+from scipy import signal as sig
 
 
 class Activity:
@@ -34,8 +36,8 @@ class Patient:
         # processes to a magnitutde
         df = df.apply(lambda x: 9.81*(x/64), axis=0)
 
-        df.columns = ['x (N)', 'y (N)', 'z (N)']
-        df['time(s)'] = np.arange(df.shape[0])/self.freq
+        df.columns = ['x', 'y', 'z']
+        df['t'] = np.arange(df.shape[0])/self.freq
         self.acc = df
 
     def findMinTime(self):
@@ -55,3 +57,12 @@ class Patient:
         self.acc = None
         self.freq = None
         self.excel_time = None
+
+    def butter(self):
+        cuttoff = 7  # Hz
+        data = self.acc
+        b, a = sig.butter(3, cuttoff/16, btype='low', analog=False)
+        x = sig.filtfilt(b, a, data['x'].to_numpy())
+        y = sig.filtfilt(b, a, data['y'].to_numpy())
+        z = sig.filtfilt(b, a, data['z'].to_numpy())
+        return x, y, z

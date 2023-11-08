@@ -1,4 +1,5 @@
 import numpy as np
+import time
 import json
 import scipy
 from scipy import signal as sig
@@ -6,23 +7,27 @@ from scipy import signal as sig
 
 class Activity:
     def __init__(self, name, length, start, patient_id):
-        self.name = name
-        self.length = length
-        self.start = start
-        self.patient_id = patient_id
+        self.name = name  # the activity name
+        # duration of the activity
+        ftr = [3600, 60, 1]
+        thing = [a*b for a, b in zip(ftr, map(int, length.split(':')))]
+        self.length = sum(thing)
+        self.start = start  # start time
+        self.patient_id = patient_id  # patient id
+        self.acc = None  # segmented data TO-DO
 
 
 class Patient:
     def __init__(self, id, csv_time, activities, acc, freq, excel_time):
-        self.id = id
-        self.csv_time = csv_time
-        self.activities = activities
-        self.acc = None
-        self.freq = freq
-        self.excel_time = 0
+        self.id = id  # patient id
+        self.csv_time = csv_time  # global start time as indiciated on the csv header
+        self.activities = activities  # list of Activity objects
+        self.acc = None  # all accelerometer data
+        self.freq = freq  # frequency of recording as indiciated on the csv header
+        self.excel_time = 0  # smallest start from all the activities in activities attribute
         self.findMinTime()
 
-    def tldr(self):
+    def tldr(self):  # quick overview
         print('Summary for patient ' + self.id + '. ' + 'There are ' + str(len(self.acc)) + ' timestamps sampled at '+str(
             self.freq) + '. There are ' + str(len(self.activities)) + ' activites associated with this patient')
 
@@ -35,7 +40,7 @@ class Patient:
         df = df.drop([0, 1])
         # processes to a magnitutde
         df = df.apply(lambda x: 9.81*(x/64), axis=0)
-
+        self.csv_time = float(df.columns.values[0])
         df.columns = ['x', 'y', 'z']
         df['t'] = np.arange(df.shape[0])/self.freq
         self.acc = df

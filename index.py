@@ -61,3 +61,8 @@ for item in correlate:  # for ever pairwise correlation
 
 print('Total excel hits =', sum, '/', len(excel))
 print('Total csv hits =', len(correlate), '/', len(csv_file))
+
+t = 0
+for csv in csv_file:
+    t += len(csv)
+print('Total length', t )

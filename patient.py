@@ -16,7 +16,6 @@ class Activity:
         self.patient_id = patient_id  # patient id
         self.acc = None  # segmented data TO-DO
 
-
 class Patient:
     def __init__(self, id, csv_time, activities, acc, freq, excel_time):
         self.id = id  # patient id

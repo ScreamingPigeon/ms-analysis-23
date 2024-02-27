@@ -29,7 +29,11 @@ resultant <- function(path){
   resultant <- sqrt((xyz[,1]^2) + (xyz[,2]^2) + (xyz[,3]^2))
   #print(length(resultant))
   dataf$resultant <- resultant
-  #print(nrow(dataf))
+  length <- (nrow(dataf))
+  activity <- seq(1, by = 0, length.out = nrow(dataf))
+  id = substring(path, 69, 90)
+  #print(id)
+  dataf$id <- id 
   dataf
 }
 
@@ -39,7 +43,8 @@ combine <- map_dfr(
     path = path))
 combine <- as.data.frame(combine)
 
-ggplot(data = combine, mapping = aes(x = t, y = resultant, group = 1)) + geom_line(colour = 'red', alpha = 0.5)
+ggplot(data = combine, mapping = aes(x = t, y = resultant, group = id)) + geom_line(aes(colour = id), alpha = 0.6)
+#p+scale_color_manual(values =c("#741B47", "#007777"))
 resultant(test)
 
 nrow(combine)

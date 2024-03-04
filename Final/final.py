@@ -143,7 +143,29 @@ for i, csv in enumerate(lost_csvs):
 
 
 #### TO-DO
-
+activity_descriptions = {
+    "B1_TWT_A": "B1_TWT_A: (WALK)",
+    "B1_T1": "B1_T1: (WALK)",
+    "B1_TWT_B": "B1_TWT_B: (WALK)",
+    "B1_T2": "B1_T2: (WALK)",
+    "B2_TWT_A": "B2_TWT_A: (WALK)",
+    "B2_T1": "B2_T1: (WALK)",
+    "B2_TWT_B": "B2_TWT_B: (WALK)",
+    "B2_T2": "B2_T2: (WALK)",
+    "TWT_A Training": "TWT_A Training: (WALK)",
+    "TWT_B Training": "TWT_B Training: (WALK)",
+    "TM Comfortable Speed": "TM Comfortable Speed: (WALK)",
+    "TMT": "trail making task: (SIT)",
+    "DSST": "digit symbol task: (SIT)",
+    "MoCA": "Montreal Cognitive Assessment: (SIT)",
+    "HR Recovery": "HR Recovery: (STAND or SIT)",
+    "Naughton Test": "Naughton Test: (WALK)",
+    "SOT": "SOT: (STAND)",
+    "Motor Behavioral Task": "Motor Behavioral Task: (All conditions seen here)",
+    "25FW_1_T1_start": "25FW_1_T1_start: 25 foot walk, condition 1 (pre-cue), trial 1, start: (WALK)",
+    "TUG_1_T2": "TUG_1_T2: timed up and go, condition 1, trial 2: (WALK)",
+    "BERG1_1_T1": "BERG1_1_T1: Berg Balance Test: (see handout for order of activities)"
+}
 
 for patient in patients:
     #for patient in patients
@@ -153,9 +175,25 @@ for patient in patients:
     
     
     print(patient.id, local_time, local_time+ len(patient.acc))
-    for activity in  reversed(patient.activities):
+
+    pf = os.path.join("Final", "patient_data")
+    if not os.path.exists(pf):
+        os.makedirs(pf)  # Create the "Activity" folder if not
+    
+    # Define the file path with the modified activity name
+    pf = os.path.join(pf, f"{patient.id}_ACC.csv")
+
+    # Save the data to a CSV file
+    patient.acc.to_csv(pf)
+    for activity in reversed(patient.activities):
         if (activity.start+activity.length <= local_time+round(patient.acc['t'].iloc[-1])):
-            print(activity.name, "Local: ",activity.start - local_time, " ", activity.start  + activity.length - local_time, activity.length, "\n" )
+            # Modify the activity.name based on the mapping
+            if activity.name in activity_descriptions:
+                activity_name_modified = activity_descriptions[activity.name]
+            else:
+                activity_name_modified = activity.name  # Use original name if not found in the mapping
+            
+            print(activity_name_modified, "Local: ", activity.start - local_time, " ", activity.start  + activity.length - local_time, activity.length, "\n" )
             
             local_start= (activity.start - local_time)* 32 -160
             local_end = (activity.start  + activity.length - local_time)*32 +160
@@ -167,19 +205,18 @@ for patient in patients:
             seg_act = patient.acc.iloc[int(local_start):int(local_end)]
             print(seg_act)
             
-
             #save stuff here
-            activity_folder_path = "Activity"
+            activity_folder_path = os.path.join("Final", "Activity")
             if not os.path.exists(activity_folder_path):
                 os.makedirs(activity_folder_path)  # Create the "Activity" folder if not
 
-            # Create the directory structure
-            activity_folder = os.path.join("Activity", activity.name)
+            # Use modified activity.name for directory and file names
+            activity_folder = os.path.join(activity_folder_path, activity_name_modified)
             if not os.path.exists(activity_folder):
                 os.makedirs(activity_folder)
             
-            # Define the file path
-            file_path = os.path.join(activity_folder, f"{patient.id}_{activity.name}.csv")
+            # Define the file path with the modified activity name
+            file_path = os.path.join(activity_folder, f"{patient.id}_{activity_name_modified}.csv")
             
             suffix = 0
 
@@ -187,13 +224,8 @@ for patient in patients:
             while os.path.exists(file_path):
                 suffix += 1
                 file_path = f"{file_path}_{suffix}.csv"
+            
             # Save the data to a CSV file
             seg_act.to_csv(file_path)
 
-            print(f"Saved {activity.name} data for patient {patient.id} to {file_path}")
-    
-
-
-
-
-
+            print(f"Saved {activity_name_modified} data for patient {patient.id} to {file_path}")

@@ -1,0 +1,40 @@
+{
+    "study_archive": {
+        "archive_filename": "CHI_Study_000.zip", 
+        "number_of_sessions_in_this_archive": 6, 
+        "study_name": "CHI_Study", 
+        "download_date": "210608-161249_UTC", 
+        "sessions": [
+            {
+                "unix_timestamp": "1623168311", 
+                "sesssion_archive_filename": "A0381c_210608-160511.zip", 
+                "UTC_time": "210608-160511"
+            }, 
+            {
+                "unix_timestamp": "1623072849", 
+                "sesssion_archive_filename": "000000_210607-133409.zip", 
+                "UTC_time": "210607-133409"
+            }, 
+            {
+                "unix_timestamp": "1622758197", 
+                "sesssion_archive_filename": "000000_210603-220957.zip", 
+                "UTC_time": "210603-220957"
+            }, 
+            {
+                "unix_timestamp": "1622752193", 
+                "sesssion_archive_filename": "000000_210603-202953.zip", 
+                "UTC_time": "210603-202953"
+            }, 
+            {
+                "unix_timestamp": "1622747449", 
+                "sesssion_archive_filename": "000000_210603-191049.zip", 
+                "UTC_time": "210603-191049"
+            }, 
+            {
+                "unix_timestamp": "1622741169", 
+                "sesssion_archive_filename": "A0381c_210603-172609.zip", 
+                "UTC_time": "210603-172609"
+            }
+        ]
+    }
+}

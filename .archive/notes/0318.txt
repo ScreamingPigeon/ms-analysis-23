@@ -1,0 +1,15 @@
+1)
+    - senseplit - python package to split into test and train data
+    - link: https://github.com/mmalekzadeh/motion-sense/tree/master?tab=readme-ov-file  
+    - https://github.com/mmalekzadeh/sensplit2) 
+    - developed rolling window technique to use on the data
+        - creates segments with specified step and 
+    - made rnn  (3layer LSTM using tensofrflow) for padded and normal data - 50% accuracy
+    - look up papers for triaxial accelerometer data
+    - with some tuning, we can turn up accuracy
+
+3)
+    - look at optimizing window and step sizes
+    - come up for a list for derived metric
+    - FFT
+    - Wavelet transform

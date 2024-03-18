@@ -1,0 +1,110 @@
+{
+    "study_archive": {
+        "archive_filename": "FourQuadStability_001.zip", 
+        "number_of_sessions_in_this_archive": 20, 
+        "study_name": "FourQuadStability", 
+        "download_date": "221030-153845_UTC", 
+        "sessions": [
+            {
+                "unix_timestamp": "1661466138", 
+                "sesssion_archive_filename": "A03adb_220825-222218.zip", 
+                "UTC_time": "220825-222218"
+            }, 
+            {
+                "unix_timestamp": "1660932151", 
+                "sesssion_archive_filename": "A03adb_220819-180231.zip", 
+                "UTC_time": "220819-180231"
+            }, 
+            {
+                "unix_timestamp": "1660924037", 
+                "sesssion_archive_filename": "A03adb_220819-154717.zip", 
+                "UTC_time": "220819-154717"
+            }, 
+            {
+                "unix_timestamp": "1660756668", 
+                "sesssion_archive_filename": "A03adb_220817-171748.zip", 
+                "UTC_time": "220817-171748"
+            }, 
+            {
+                "unix_timestamp": "1660752398", 
+                "sesssion_archive_filename": "A03adb_220817-160638.zip", 
+                "UTC_time": "220817-160638"
+            }, 
+            {
+                "unix_timestamp": "1660334902", 
+                "sesssion_archive_filename": "A03adb_220812-200822.zip", 
+                "UTC_time": "220812-200822"
+            }, 
+            {
+                "unix_timestamp": "1660330692", 
+                "sesssion_archive_filename": "A03adb_220812-185812.zip", 
+                "UTC_time": "220812-185812"
+            }, 
+            {
+                "unix_timestamp": "1660323594", 
+                "sesssion_archive_filename": "A03adb_220812-165954.zip", 
+                "UTC_time": "220812-165954"
+            }, 
+            {
+                "unix_timestamp": "1660244277", 
+                "sesssion_archive_filename": "A03adb_220811-185757.zip", 
+                "UTC_time": "220811-185757"
+            }, 
+            {
+                "unix_timestamp": "1660237071", 
+                "sesssion_archive_filename": "A03adb_220811-165751.zip", 
+                "UTC_time": "220811-165751"
+            }, 
+            {
+                "unix_timestamp": "1660157960", 
+                "sesssion_archive_filename": "A03adb_220810-185920.zip", 
+                "UTC_time": "220810-185920"
+            }, 
+            {
+                "unix_timestamp": "1660151231", 
+                "sesssion_archive_filename": "A03adb_220810-170711.zip", 
+                "UTC_time": "220810-170711"
+            }, 
+            {
+                "unix_timestamp": "1660071642", 
+                "sesssion_archive_filename": "A03adb_220809-190042.zip", 
+                "UTC_time": "220809-190042"
+            }, 
+            {
+                "unix_timestamp": "1660064346", 
+                "sesssion_archive_filename": "A03adb_220809-165906.zip", 
+                "UTC_time": "220809-165906"
+            }, 
+            {
+                "unix_timestamp": "1659809224", 
+                "sesssion_archive_filename": "A03adb_220806-180704.zip", 
+                "UTC_time": "220806-180704"
+            }, 
+            {
+                "unix_timestamp": "1659632348", 
+                "sesssion_archive_filename": "A03adb_220804-165908.zip", 
+                "UTC_time": "220804-165908"
+            }, 
+            {
+                "unix_timestamp": "1652130258", 
+                "sesssion_archive_filename": "A03adb_220509-210418.zip", 
+                "UTC_time": "220509-210418"
+            }, 
+            {
+                "unix_timestamp": "1652107016", 
+                "sesssion_archive_filename": "A03adb_220509-143656.zip", 
+                "UTC_time": "220509-143656"
+            }, 
+            {
+                "unix_timestamp": "1651782797", 
+                "sesssion_archive_filename": "A03adb_220505-203317.zip", 
+                "UTC_time": "220505-203317"
+            }, 
+            {
+                "unix_timestamp": "1651772998", 
+                "sesssion_archive_filename": "A03adb_220505-174958.zip", 
+                "UTC_time": "220505-174958"
+            }
+        ]
+    }
+}

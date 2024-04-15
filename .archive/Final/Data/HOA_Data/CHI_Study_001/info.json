@@ -1,0 +1,175 @@
+{
+    "study_archive": {
+        "archive_filename": "CHI_Study_001.zip", 
+        "number_of_sessions_in_this_archive": 33, 
+        "study_name": "CHI_Study", 
+        "download_date": "210804-020559_UTC", 
+        "sessions": [
+            {
+                "unix_timestamp": "1627656930", 
+                "sesssion_archive_filename": "A0381c_210730-145530.zip", 
+                "UTC_time": "210730-145530"
+            }, 
+            {
+                "unix_timestamp": "1627482206", 
+                "sesssion_archive_filename": "A0381c_210728-142326.zip", 
+                "UTC_time": "210728-142326"
+            }, 
+            {
+                "unix_timestamp": "1627416640", 
+                "sesssion_archive_filename": "A0381c_210727-201040.zip", 
+                "UTC_time": "210727-201040"
+            }, 
+            {
+                "unix_timestamp": "1627317656", 
+                "sesssion_archive_filename": "A0381c_210726-164056.zip", 
+                "UTC_time": "210726-164056"
+            }, 
+            {
+                "unix_timestamp": "1626983255", 
+                "sesssion_archive_filename": "A0381c_210722-194735.zip", 
+                "UTC_time": "210722-194735"
+            }, 
+            {
+                "unix_timestamp": "1626890019", 
+                "sesssion_archive_filename": "A0381c_210721-175339.zip", 
+                "UTC_time": "210721-175339"
+            }, 
+            {
+                "unix_timestamp": "1626801454", 
+                "sesssion_archive_filename": "A0381c_210720-171734.zip", 
+                "UTC_time": "210720-171734"
+            }, 
+            {
+                "unix_timestamp": "1626722546", 
+                "sesssion_archive_filename": "A0381c_210719-192226.zip", 
+                "UTC_time": "210719-192226"
+            }, 
+            {
+                "unix_timestamp": "1626293782", 
+                "sesssion_archive_filename": "A0381c_210714-201622.zip", 
+                "UTC_time": "210714-201622"
+            }, 
+            {
+                "unix_timestamp": "1626276322", 
+                "sesssion_archive_filename": "A0381c_210714-152522.zip", 
+                "UTC_time": "210714-152522"
+            }, 
+            {
+                "unix_timestamp": "1626213942", 
+                "sesssion_archive_filename": "A0381c_210713-220542.zip", 
+                "UTC_time": "210713-220542"
+            }, 
+            {
+                "unix_timestamp": "1626186770", 
+                "sesssion_archive_filename": "A0381c_210713-143250.zip", 
+                "UTC_time": "210713-143250"
+            }, 
+            {
+                "unix_timestamp": "1626117606", 
+                "sesssion_archive_filename": "A0381c_210712-192006.zip", 
+                "UTC_time": "210712-192006"
+            }, 
+            {
+                "unix_timestamp": "1626101251", 
+                "sesssion_archive_filename": "A0381c_210712-144731.zip", 
+                "UTC_time": "210712-144731"
+            }, 
+            {
+                "unix_timestamp": "1625933882", 
+                "sesssion_archive_filename": "A0381c_210710-161802.zip", 
+                "UTC_time": "210710-161802"
+            }, 
+            {
+                "unix_timestamp": "1625768342", 
+                "sesssion_archive_filename": "A0381c_210708-181902.zip", 
+                "UTC_time": "210708-181902"
+            }, 
+            {
+                "unix_timestamp": "1625682193", 
+                "sesssion_archive_filename": "A0381c_210707-182313.zip", 
+                "UTC_time": "210707-182313"
+            }, 
+            {
+                "unix_timestamp": "1625577739", 
+                "sesssion_archive_filename": "A0381c_210706-132219.zip", 
+                "UTC_time": "210706-132219"
+            }, 
+            {
+                "unix_timestamp": "1624540896", 
+                "sesssion_archive_filename": "A0381c_210624-132136.zip", 
+                "UTC_time": "210624-132136"
+            }, 
+            {
+                "unix_timestamp": "1624461756", 
+                "sesssion_archive_filename": "A0381c_210623-152236.zip", 
+                "UTC_time": "210623-152236"
+            }, 
+            {
+                "unix_timestamp": "1624373594", 
+                "sesssion_archive_filename": "A0381c_210622-145314.zip", 
+                "UTC_time": "210622-145314"
+            }, 
+            {
+                "unix_timestamp": "1624108880", 
+                "sesssion_archive_filename": "A0381c_210619-132120.zip", 
+                "UTC_time": "210619-132120"
+            }, 
+            {
+                "unix_timestamp": "1624044541", 
+                "sesssion_archive_filename": "A0381c_210618-192901.zip", 
+                "UTC_time": "210618-192901"
+            }, 
+            {
+                "unix_timestamp": "1623954697", 
+                "sesssion_archive_filename": "A0381c_210617-183137.zip", 
+                "UTC_time": "210617-183137"
+            }, 
+            {
+                "unix_timestamp": "1623781234", 
+                "sesssion_archive_filename": "A0381c_210615-182034.zip", 
+                "UTC_time": "210615-182034"
+            }, 
+            {
+                "unix_timestamp": "1623759858", 
+                "sesssion_archive_filename": "A0381c_210615-122418.zip", 
+                "UTC_time": "210615-122418"
+            }, 
+            {
+                "unix_timestamp": "1623684007", 
+                "sesssion_archive_filename": "A0381c_210614-152007.zip", 
+                "UTC_time": "210614-152007"
+            }, 
+            {
+                "unix_timestamp": "1623609318", 
+                "sesssion_archive_filename": "A0381c_210613-183518.zip", 
+                "UTC_time": "210613-183518"
+            }, 
+            {
+                "unix_timestamp": "1623597626", 
+                "sesssion_archive_filename": "A0381c_210613-152026.zip", 
+                "UTC_time": "210613-152026"
+            }, 
+            {
+                "unix_timestamp": "1623420306", 
+                "sesssion_archive_filename": "A0381c_210611-140506.zip", 
+                "UTC_time": "210611-140506"
+            }, 
+            {
+                "unix_timestamp": "1623351962", 
+                "sesssion_archive_filename": "A0381c_210610-190602.zip", 
+                "UTC_time": "210610-190602"
+            }, 
+            {
+                "unix_timestamp": "1623332379", 
+                "sesssion_archive_filename": "A0381c_210610-133939.zip", 
+                "UTC_time": "210610-133939"
+            }, 
+            {
+                "unix_timestamp": "1623251775", 
+                "sesssion_archive_filename": "A0381c_210609-151615.zip", 
+                "UTC_time": "210609-151615"
+            }
+        ]
+    }
+}
